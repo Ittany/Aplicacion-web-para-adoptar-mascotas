@@ -1,0 +1,181 @@
+.recuperarpassword-container {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 86.5vh;
+  background-color: white;
+  padding: 1rem;
+}
+
+.recuperarpassword-image {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.recuperarpassword-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.recuperarpassword-form-container {
+  flex: 1;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.recuperarpassword-form-box {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(247, 116, 116, 0.588);
+  padding: 2rem;
+}
+
+.logo {
+  width: 120px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.form-title {
+  color: #f28794;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-subtitle {
+  color: #6f6f6f;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container input {
+  width: 98%;
+  padding: 0.75rem;
+  border: 1px solid #f28794;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.password-input-container input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f28794;
+  cursor: pointer;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+}
+
+.toggle-password:hover {
+  color: #d55d6c;
+}
+
+/* Estilos para los botones */
+.buttons-container {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.action-button {
+  width: 98%;
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.submit-button {
+  background-color: #ff9da8;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #ff7e7e;
+}
+
+.back-button {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.cancel-button {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recuperarpassword-container {
+    flex-direction: column;
+  }
+
+  .recuperarpassword-image {
+    display: none;
+  }
+
+  .recuperarpassword-form-container {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .buttons-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .action-button {
+    width: 100%;
+  }
+}

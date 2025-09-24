@@ -1,0 +1,185 @@
+.login-container {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86.5vh;
+  background-color: #ffffff;
+}
+
+.login-image {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login-image img {
+  margin-top: 3rem;
+  margin-left: 6rem;
+  width: 600px;
+  height: 540px;
+  object-fit: cover;
+}
+
+.login-form-box {
+  flex: 1;
+  padding: 2.5rem;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(247, 116, 116, 0.588);
+  margin-right: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  width: 160px;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #001226;
+  font-weight: 500;
+}
+
+input {
+  
+  width: 90%;
+  padding: 0.75rem;
+  border: 1px solid #f28794;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #f28794;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #D55D6C;
+}
+.no-account {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.no-account a {
+  color: #f36262;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+
+.no-account a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  color: #ff6969;
+  font-size: 0.9rem;
+  text-align: right;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.password-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.password-input-container {
+    position: relative;
+    width: 97%;
+}
+
+.password-input {
+    width: 100%;
+    padding: 0.75rem;
+    padding-right: 40px; /* Espacio para el botón */
+    border: 1px solid #f28794;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.toggle-password-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password-icon {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.toggle-password-button:hover .toggle-password-icon {
+    opacity: 0.8;
+}
+
+/* Opcional: estilo cuando está activo */
+.toggle-password-button.active {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .login-image {
+    display: none;
+  }
+
+  .login-form-box {
+    margin: 1rem ;
+    width: 90%;
+
+  }
+}
+

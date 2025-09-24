@@ -1,0 +1,2 @@
+<?php
+// includes/funciones.php

@@ -1,0 +1,291 @@
+/* admin/mis_solicitudes.css */
+:root {
+    --primary-color: #4e73df;
+    --primary-dark: #2e59d9;
+    --primary-light: #f8f9fc;
+    --secondary-color: #1cc88a;
+    --accent-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --light-bg: #f8f9fa;
+    --dark-text: #5a5c69;
+    --light-text: #f8f9fa;
+    --gray-border: #e3e6f0;
+    --card-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    --hover-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --border-radius: 0.35rem;
+    --transition: all 0.3s ease;
+}
+
+/* Estructura principal */
+body {
+    background-color: var(--primary-light);
+    color: var(--dark-text);
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Sidebar y contenido principal */
+.sidebar {
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+}
+
+.main-content {
+    padding: 1.5rem;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid var(--gray-border);
+    padding: 1rem 1.25rem;
+}
+
+.card-header h5 {
+    margin-bottom: 0;
+}
+
+/* Tarjetas */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table thead th {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-bottom: 2px solid var(--gray-border);
+    border-top: none;
+}
+
+.table tbody tr {
+    transition: var(--transition);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+.table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid var(--gray-border);
+}
+
+/* Badges de estado */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35em 0.65em;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bg-success {
+    background-color: var(--secondary-color) !important;
+}
+
+.bg-warning {
+    background-color: var(--accent-color) !important;
+    color: #000 !important;
+}
+
+.bg-danger {
+    background-color: var(--danger-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Botones */
+.btn {
+    font-weight: 600;
+    padding: 0.375rem 0.75rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn-outline-secondary {
+    color: #6e707e;
+    border-color: #d1d3e2;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #d1d3e2;
+    color: #2e2f37;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Gráfico */
+#estadosChart {
+    max-height: 250px;
+}
+
+/* Alertas */
+.alert {
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1.25rem;
+}
+
+.alert-info {
+    background-color: #e7f1ff;
+    border-color: #d2e3fc;
+    color: #2c3e50;
+}
+
+/* Efectos y animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.table tbody tr {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        border: 1px solid var(--gray-border);
+        border-radius: var(--border-radius);
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .table tr {
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--card-shadow);
+    }
+    
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-top: none;
+        border-bottom: 1px solid var(--gray-border);
+    }
+    
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: calc(50% - 1rem);
+        padding-right: 1rem;
+        text-align: left;
+        font-weight: 600;
+        color: var(--primary-dark);
+    }
+    
+    .table td:last-child {
+        border-bottom: none;
+    }
+    
+    .badge {
+        float: right;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Estilos específicos para la página */
+.pet-img {
+    max-width: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--gray-border);
+    transition: var(--transition);
+}
+
+.pet-img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--hover-shadow);
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--primary-dark);
+    display: inline-block;
+    min-width: 180px;
+}
+
+.info-value {
+    color: var(--dark-text);
+}
+
+.comentarios-historial pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    background-color: var(--primary-light);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}

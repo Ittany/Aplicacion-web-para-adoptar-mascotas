@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #80b563;
+    --primary-dark: #74dc62;
+    --secondary-color: #3dc3ce;
+    --accent-color: #6cc4cc;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "DynaPuff", system-ui;
+    font-weight: 500;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+.info-label {
+    font-weight: 600;
+    color: #2473af;
+}
+.info-value {
+    color: #000e1d;
+}
+.badge-estado {
+    font-size: 0.9rem;
+    padding: 0.35em 0.65em;
+}
+.comentarios-historial {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    white-space: pre-wrap;
+}
+.pet-img {
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}

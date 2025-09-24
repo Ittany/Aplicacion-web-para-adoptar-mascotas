@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #80b563;
+    --primary-dark: #74dc62;
+    --secondary-color: #3dc3ce;
+    --accent-color: #6cc4cc;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+body {
+    font-family: 'DynaPuff', cursive;
+    background-color:  #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.mb-4 {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.table {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+}
+
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary:hover {
+    background-color: #5a32a3;
+    border-color: #5a32a3;
+}
+
+.alert {
+    border-radius: 10px;
+}
+
+h2 {
+    color: #6f42c1;
+}
+
+.lead {
+    color: #6c757d;
+}

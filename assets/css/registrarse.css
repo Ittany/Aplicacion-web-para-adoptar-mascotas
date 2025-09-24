@@ -1,0 +1,252 @@
+/* Estilos base */
+.register-container {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 86.5vh;
+  background-color: white;
+  padding: 1rem;
+}
+
+.register-image {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.register-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.register-form-box {
+  flex: 1;
+  max-width: 500px;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(247, 116, 116, 0.588);
+  margin: 1rem;
+}
+
+/* Estilos para texto y enlaces */
+.account {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.account a {
+  color: #f36262;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+
+.account a:hover {
+  text-decoration: underline;
+}
+
+.form-title {
+  color: #f28794;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-subtitle {
+  color: #6f6f6f;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.register-logo {
+  width: 90px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+/* Estilos para formularios */
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+input {
+  width: 90%;
+  padding: 0.75rem;
+  border: 1px solid #f28794;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para botones */
+.register-button {
+  width: 95%;
+  padding: 0.75rem;
+  background-color: #f28794;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.register-button:hover {
+  background-color: #d55d6c;
+}
+
+/* Estilos para las etapas */
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+.step-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  border: 2px solid #f28794;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #f28794;
+  font-weight: bold;
+}
+
+.step-circle.active {
+  background-color: #f28794;
+  color: white;
+}
+
+/* Estilos para grids */
+.grid-datos-personales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+/* Estilos para campos de contraseña */
+.password-group {
+  position: relative;
+  width: 90%;
+}
+
+.password-input-container {
+  position: relative;
+  width: 94%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.1px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+}
+
+.password-group input {
+  padding-right: 40px;
+  width: 100%;
+}
+
+/* Estilos para mensajes de ayuda */
+.hint {
+  font-size: 0.8rem;
+  color: #6f6f6f;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    margin-top: 4rem;
+    min-height: auto;
+  }
+  
+  .register-image {
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .register-form-box {
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+  }
+  
+  .grid-datos-personales {
+    grid-template-columns: 1fr;
+  }
+  
+  .full-width {
+    grid-column: span 1;
+  }
+  
+  input, .register-button {
+    width: 100%;
+  }
+  
+  .password-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    margin-top: 3rem;
+    padding: 0.5rem;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+}

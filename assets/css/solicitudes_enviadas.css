@@ -1,0 +1,230 @@
+/* solicitudes_enviadas.css */
+:root {
+    --primary-color: #80b563;
+    --primary-dark: #6a9e55;
+    --primary-light: #e8f5e9;
+    --secondary-color: #3dc3ce;
+    --accent-color: #6cc4cc;
+    --light-bg: #f8f9fa;
+    --dark-text: #2c3e50;
+    --light-text: #f8f9fa;
+    --gray-border: #e0e0e0;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    
+    max-width: 1000px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Encabezado */
+h2 {
+    font-family: "DynaPuff", system-ui;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.lead {
+    color: var(--dark-text);
+    font-weight: 400;
+}
+
+/* Tabla de solicitudes */
+.table {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    padding: 1rem;
+    border: none;
+}
+
+.table tbody tr {
+    transition: var(--transition);
+}
+
+.table tbody tr:hover {
+    background-color: var(--primary-light);
+    transform: translateX(5px);
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-top: 1px solid var(--gray-border);
+}
+
+/* Badges de estado */
+.badge {
+    font-size: 0.85rem;
+    padding: 0.5em 0.8em;
+    border-radius: 50px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.bg-warning {
+    background-color: #FFC107 !important;
+    color: #212529 !important;
+}
+
+.bg-success {
+    background-color: var(--primary-dark) !important;
+}
+
+.bg-danger {
+    background-color: #DC3545 !important;
+}
+
+.bg-info {
+    background-color: var(--secondary-color) !important;
+}
+
+/* Botones */
+.btn-outline-primary {
+    color: #6c757d;
+    border-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.btn-outline-primary:hover {
+    background-color: #6c757d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary i {
+    transition: var(--transition);
+}
+
+.btn-outline-primary:hover i {
+    transform: scale(1.2);
+}
+
+/* Alertas */
+.alert {
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.alert-info {
+    background-color: #e8f5e9;
+    border-color: var(--primary-light);
+    color: var(--dark-text);
+}
+
+.alert-link {
+    color: var(--primary-dark);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.alert-link:hover {
+    color: var(--primary-color);
+}
+
+/* Enlace de mascota */
+.table a {
+ background-color: #e3e3e340;
+    color: #6c757d;
+    font-weight: 500;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.table a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Texto muted */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .table-responsive {
+        border-radius: var(--border-radius);
+        border: 1px solid var(--gray-border);
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .table tr {
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--card-shadow);
+    }
+    
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-top: none;
+        border-bottom: 1px solid var(--gray-border);
+    }
+    
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: calc(50% - 1rem);
+        padding-right: 1rem;
+        text-align: left;
+        font-weight: 600;
+        color: var(--primary-dark);
+    }
+    
+    .table td:last-child {
+        border-bottom: none;
+    }
+    
+    .badge {
+        float: right;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.table tbody tr {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.table tbody tr:nth-child(4) { animation-delay: 0.4s; }
